@@ -1,0 +1,316 @@
+/* =========================
+   RESET & GLOBAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+@font-face {
+    font-family: 'Bricolage Grotesque';
+    src: url('fonts/Bricolage Grotesque.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Bricolage Grotesque', 'Segoe UI', Arial, sans-serif;
+    background: #0b1c2d;
+    color: #e6edf3;
+}
+
+/* =========================
+   HEADER / NAV
+========================= */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #081421;
+    border-bottom: 1px solid #12263a;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 8%;
+}
+
+.logo img { height: 30px; width: auto; }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #e6edf3;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover { color: #4da3ff; }
+
+/* =========================
+   SECTIONS
+========================= */
+main section {
+    height: 100vh;
+    padding: 120px 10%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+/* ---------- COVER ---------- */
+#cover {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.cover-title {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-title h1 {
+    font-size: 10vw;
+    font-weight: 800;
+    letter-spacing: 5px;
+    color: #fff;
+}
+
+#cover p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #c9d6e2;
+}
+
+#cover img {
+    margin-top: 30px;
+    max-width: 250px;
+    border-radius: 50%;
+}
+
+/* ---------- BACKGROUNDS ---------- */
+#about, #stage, #projects, #contact, #quiz { background: #0f253d; }
+#academic, #certifs, #hobby, #iit { background: #0b1c2d; }
+
+/* =========================
+   SECTION CONTAINER: TEXT LEFT, IMAGE RIGHT
+========================= */
+.section-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.section-text { flex: 1; }
+.section-text h2, .section-text h3 { color: #fff; margin-bottom: 15px; }
+.section-text p { font-size: 1.1rem; line-height: 1.6; color: #c9d6e2; margin-bottom: 12px; }
+.section-text strong { color: #4da3ff; }
+.section-text a { color: #4da3ff; text-decoration: underline; transition: color 0.3s; }
+.section-text a:hover { color: #78b8ff; }
+
+.section-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-image img {
+    max-width: 80%;
+    border-radius: 10px;
+    border: 3px solid #4da3ff;
+}
+#certifs .section-image { flex-direction: column; }
+#certifs .section-image img { max-width: 55%; }
+
+/* =========================
+   TABLES (Skills)
+========================= */
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+.skills-table td {
+    padding: 12px 15px;
+    background: #12263a;
+    color: #4da3ff;
+    font-weight: 600;
+    border-radius: 8px;
+    text-align: center;
+    transition: 0.3s;
+}
+.skills-table td:hover {
+    background: #4da3ff;
+    color: #081421;
+    transform: translateY(-2px);
+}
+
+/* =========================
+   INTERNSHIPS / PROJECTS
+========================= */
+.projects-list, .hobbies-list, .certifs-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+
+.projects-list li, .hobbies-list li, .certifs-list li {
+    background: #12263a;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    color: #c9d6e2;
+    transition: 0.3s;
+}
+
+.hobbies-list li:hover {
+    background: #4da3ff;
+    color: #081421;
+    transform: translateY(-2px);
+}
+
+.projects-list li strong, .hobbies-list li strong, .certifs-list li strong { color: #4da3ff; }
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background: #081421;
+    border-top: 1px solid #12263a;
+    padding: 15px 8%;
+    color: #9fb3c8;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-icons a {
+    color: #e6edf3;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+.social-icons a:hover { color: #4da3ff; }
+
+/* =========================
+   CONTACT FORM
+========================= */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+}
+#contact input, #contact textarea {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 2px solid #4da3ff;
+    background: #12263a;
+    color: #e6edf3;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+#contact input:focus, #contact textarea:focus {
+    outline: none;
+    border-color: #78b8ff;
+    background: #0f253d;
+}
+#contact button {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: none;
+    background: #4da3ff;
+    color: #081421;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#contact button:hover { background: #78b8ff; transform: translateY(-2px); }
+
+/* =========================
+   NAV ARROWS
+========================= */
+.nav-arrows {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+.nav-arrows button {
+    font-size: 22px;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 50%;
+    background: #4da3ff;
+    color: #081421;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.nav-arrows button:hover { background: #ff78ae; transform: translateY(-2px); }
+
+/* =========================
+   QUIZ
+========================= */
+#quiz {
+    padding: 80px 10%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#quiz h2 { font-size: 2.5rem; margin-bottom: 20px; color: #4da3ff; }
+#quiz p { font-size: 1.1rem; margin-bottom: 25px; }
+
+.quiz-question {
+    background: #12263a;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+}
+.quiz-question p { font-weight: 600; margin-bottom: 15px; }
+.quiz-question label {
+    display: block;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.quiz-question input[type="radio"] { margin-right: 8px; }
+
+#quiz button[type="submit"] {
+    background: #4da3ff;
+    color: #081421;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#quiz button[type="submit"]:hover { background: #78b8ff; transform: translateY(-2px); }
+
+#quiz-result {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    font-weight: 600;
+}
