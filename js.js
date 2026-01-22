@@ -30,7 +30,7 @@ const form = document.getElementById("contact-form");
 const formMessage = document.getElementById("form-message");
 
 if (form && formMessage) {
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", (e)=> {
         e.preventDefault();
 
         const name = document.getElementById("name").value;
@@ -57,7 +57,7 @@ const quizForm = document.getElementById("quiz-form");
 const quizResult = document.getElementById("quiz-result");
 
 if (quizForm && quizResult) {
-    quizForm.addEventListener("submit", function (e) {
+    quizForm.addEventListener("submit", (e)=> {
         e.preventDefault();
 
         const answers = {
